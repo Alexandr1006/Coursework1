@@ -84,6 +84,7 @@ public class EmployeeService {
             }
         }
     }
+
     public static void printMaxMoney(Employee[] employee) {
         for (Employee value : employee) {
             if (value != null) {
@@ -94,6 +95,7 @@ public class EmployeeService {
 
         }
     }
+
     public static void printSumMoney(Employee[] employee) {
         System.out.println("Сумма зарплат = " + sumSalary(employee));
     }

@@ -40,12 +40,14 @@ public class Employee {
     public void setDepartment(int department) {
         this.department = department;
     }
+
     private boolean checkDepartment(int department) {
         if (department > 5 || department < 1) {
             throw new IllegalArgumentException("Значение отдела должно быть от 1 до 5.");
         }
         return true;
     }
+
     public void setSalary(double salary) {
         this.salary = salary;
     }
