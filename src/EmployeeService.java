@@ -12,41 +12,37 @@ public class EmployeeService {
 
     public static double minSalary(Employee[] employee) {
         double minSalaryEmployee = 0;
-        for (int a = 0; a < employee.length; a++) {
-            if (a == 0) {
-                minSalaryEmployee = employee[a].getSalary();
+        for (Employee volue : employee) {
+            if (volue != null) {
+                minSalaryEmployee = volue.getSalary();
+                break;
             }
-            if (employee[a] != null) {
-                if (employee[a].getSalary() < minSalaryEmployee) {
-                    minSalaryEmployee = employee[a].getSalary();
+        }
+            for (Employee volue : employee){
+                if (minSalaryEmployee >= volue.getSalary()) {
+                    minSalaryEmployee = volue.getSalary();
                 }
 
             }
 
-        }
+
 
         return minSalaryEmployee;
     }
 
     public static double maxSalary(Employee[] employee) {
         double maxSalaryEmployee = 0;
-        for (int a = 0; a < employee.length; a++) {
-            if (a == 0) {
-                maxSalaryEmployee = employee[a].getSalary();
-            }
-            if (employee[a] != null) {
-                if (employee[a].getSalary() > maxSalaryEmployee) {
-                    maxSalaryEmployee = employee[a].getSalary();
+        for (Employee volue1 : employee) {
+            if (volue1 != null) {
+                if (volue1.getSalary() > maxSalaryEmployee) {
+                    maxSalaryEmployee = volue1.getSalary();
+                    }
                 }
-
             }
-
+            return maxSalaryEmployee;
         }
 
-        return maxSalaryEmployee;
-    }
-
-    public static void listEmployee(Employee[] employee) {
+        public static void listEmployee(Employee[] employee) {
         System.out.println("Список все сотрудников: ");
         for (Employee value : employee) {
             if (value != null) {
